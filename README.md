@@ -2,7 +2,7 @@
 
 Use the composer `global` command:
 ```bash
-composer global require "connorvg/deploy=~1.0"
+composer global require "connorvg/forge-deploy=~1.0"
 ```
 
 Make sure to place the `~/.composer/vendor/bin` directory in your PATH so the `forge-deploy` executable is found when you run the `forge-deploy` command in your terminal.
