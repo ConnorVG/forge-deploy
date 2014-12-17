@@ -21,10 +21,10 @@ forge-deploy update [name] [new-endpoint]
 
 To delete a deployment:
 ```bash
-  forge-deploy delete [name]
+forge-deploy delete [name]
 ```
 
 Finally, to deploy:
 ```bash
-  forge-deploy deploy [name]
+forge-deploy deploy [name]
 ```
