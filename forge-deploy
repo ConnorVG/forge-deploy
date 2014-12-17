@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__ . '/vendor/autoload.php'))
+{
+    require __DIR__ . '/vendor/autoload.php';
+}
+else
+{
+    require __DIR__ . '/../../autoload.php';
+}
+
+function save_path()
+{
+    if (isset($_SERVER['HOME']))
+    {
+        return $_SERVER['HOME'] . '/.forge-deploy';
+    }
+
+    return $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'] . DIRECTORY_SEPARATOR . '.forge-deploy';
+}
+
+$app = new Symfony\Component\Console\Application('Forge Deploy', '1.0.0');
+$app->add(new ConnorVG\Deploy\Console\SaveCommand);
+$app->add(new ConnorVG\Deploy\Console\DeleteCommand);
+$app->add(new ConnorVG\Deploy\Console\UpdateCommand);
+$app->add(new ConnorVG\Deploy\Console\DeployCommand);
+
+$app->run();

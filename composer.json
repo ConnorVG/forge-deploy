@@ -1,0 +1,24 @@
+{
+  "name": "connorvg/forge-deploy",
+  "description": "A simple CLI for deploying forge websites.",
+  "keywords": ["forge", "laravel"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Connor S. Parks",
+      "email": "connor@connorvg.tv"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ConnorVG\\Deploy\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/console": "~2.3",
+    "guzzlehttp/guzzle": "~5.0"
+  },
+  "bin": [
+    "forge-deploy"
+  ]
+}
